@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import ru.fonin.mvc.repositories.UserRepository;
 //import ru.fonin.mvc.dao.UserDao;
 //import ru.fonin.mvc.forms.UserForm;
 //import ru.fonin.mvc.models.User;
@@ -21,11 +22,22 @@ public class UsersController {
 
 //    @Autowired
 //    private UserDao usersDao;
+    @Autowired
+    UserRepository userRepository;
 
 
     @RequestMapping(path = "/start", method = RequestMethod.GET)
     public ModelAndView start() {
-        ModelAndView modelAndView= new ModelAndView("hello");
+        ModelAndView modelAndView= new ModelAndView("startPage");
         return modelAndView;
     }
+
+
+
+    @RequestMapping(path="/auth", method = RequestMethod.POST)
+    public ModelAndView authorization(){
+        ModelAndView modelAndView= new ModelAndView("auth");
+        return modelAndView;
+    }
+
 }
