@@ -30,6 +30,7 @@ public class UsersController {
     public ModelAndView start() {
         ModelAndView modelAndView= new ModelAndView("startPage");
         return modelAndView;
+//        return "redirect:/registration";
     }
 
 

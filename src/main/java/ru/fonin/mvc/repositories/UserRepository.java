@@ -7,4 +7,5 @@ import ru.fonin.mvc.models.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByLogin(String login);
+
 }

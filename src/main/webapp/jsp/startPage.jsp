@@ -12,9 +12,11 @@
 </head>
 <body>
 
-<form  method="post" action="/registration">
-    <input name="signup" type="submit" value="New user">
+<form method="get" action="/registration">
+    <input name="signup" type="submit" value="New User">
 </form>
+
+
 
 <form  method="post" action="/auth">
     <input name="signup" type="submit" value="Existing user">
