@@ -24,14 +24,24 @@ public class User implements UserDetails {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "first_name")
+    @Column(name = "login")
     private String login;
 
     @Column(name ="password")
     private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Set<Role> roles;
+    @Column(name = "firstName")
+    private String firstName;
+
+    @Column(name = "lastName")
+    private String lastName;
+
+
+//    @ManyToMany(fetch = FetchType.EAGER)
+    @Enumerated( value = EnumType.STRING)
+    private Role role;
+    @Enumerated( value = EnumType.STRING)
+    private State state;
 
     public static User from(UserForm userForm){
         return User.builder()
@@ -48,13 +58,13 @@ public class User implements UserDetails {
         return null;
     }
 
-    public Collection<Role> getRoles(){
-        return roles;
-    }
+//    public Collection<Role> getRoles(){
+//        return roles;
+//    }
 
-    public void setRoles(Set<Role> roles){
-        this.roles=roles;
-    }
+//    public void setRoles(Set<Role> roles){
+//        this.roles=roles;
+//    }
 
     @Override
     public String getUsername() {
@@ -78,6 +88,6 @@ public class User implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return false;
     }
 }

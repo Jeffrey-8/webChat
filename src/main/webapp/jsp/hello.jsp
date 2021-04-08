@@ -14,10 +14,7 @@
     <title>Hello World!</title>
 </head>
 <body>
-<h1 th:inline="text">Hello </h1>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Sign Out"/>
-</form>
+hello!
 </body>
 </html>
 <%--${cookie.}--%>

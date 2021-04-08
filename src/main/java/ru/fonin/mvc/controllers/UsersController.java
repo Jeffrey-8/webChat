@@ -33,12 +33,18 @@ public class UsersController {
 //        return "redirect:/registration";
     }
 
+//    @RequestMapping(path = "/hello", method = RequestMethod.GET)
+//    public ModelAndView hello() {
+//        ModelAndView modelAndView= new ModelAndView("hello");
+//        return modelAndView;
+////        return "redirect:/registration";
+//    }
 
 
-    @RequestMapping(path="/auth", method = RequestMethod.POST)
-    public ModelAndView authorization(){
-        ModelAndView modelAndView= new ModelAndView("auth");
-        return modelAndView;
-    }
+//    @RequestMapping(path="/auth", method = RequestMethod.POST)
+//    public ModelAndView authorization(){
+//        ModelAndView modelAndView= new ModelAndView("auth");
+//        return modelAndView;
+//    }
 
 }

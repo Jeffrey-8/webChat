@@ -4,6 +4,8 @@
 <head>
     <title>Title</title>
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/bootsrtap.min.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -11,13 +13,10 @@
     <h2>Hello!</h2>
 </div>
 
-<div th:if="${param.error}">
-  Invalid username and password.
-</div>
+<#if error??>
+<div class="alert alert-danger" role="alert">Логин или пароль введены неверно</div>
+</#if>
 
-<div th:if="${param.logout}">
-  You have been logged out.
-</div>
 
 <div class="form-style-2">
     <form method="post" action="/SignIn">
